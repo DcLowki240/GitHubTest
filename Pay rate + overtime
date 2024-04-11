@@ -1,0 +1,18 @@
+# -*- coding: utf-8 -*-
+Created on Wed Apr 10 15:32:07 2024
+
+@author: Kyle4
+"""
+#Prompt the user for input
+name = input("Name:")
+hour = float(input("hours worked:"))
+rate_per_hour = float(input("hourly rate:"))
+
+#Calculating the grosspay
+if hour <= 40:
+    gross_pay = hour * rate_per_hour
+else:
+    regular_pay = 40 * rate_per_hour
+    overtime_pay = (hour - 40) * (1.5 * rate_per_hour)
+    gross_pay = (regular_pay + overtime_pay)
+print("Gross Pay:", gross_pay)
